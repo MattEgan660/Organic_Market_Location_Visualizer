@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/coffeehouse.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#home" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#finder" class="w3-button w3-block w3-black">Maryland Counties</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#income" class="w3-button w3-block w3-black">Income View</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#population" class="w3-button w3-block w3-black">Population View</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Maryland<br>New Market Site Finder</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="container" id="finder">
+    <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">MARYLAND MARKET SITE FINDER</span></h5>
+        <p>Find a new market site base on Maryland's current demographic data and competitor locations.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="select_county">
+            <h5>Select County</h5>
+                <select id="selDataset" onchange="optionChanged(this.value)"></select>
+            </div>
+        <!-- <div class="panel panel-primary"> -->
+          <!-- <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body">
+          </div>
+        </div> -->
+        </div>
+
+        <div class="w3-container" id="menu">
+            <div class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Map View</span></h5>
+                <div class="col-md-5">
+                <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="w3-container" id="menu">
+            <div class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Income View</span></h5>
+                <div class="col-md-5">
+                <div id="income"></div>
+             </div>
+        </div>
+      </div>
+    </div>
+        <div class="w3-container" id="menu">
+            <div class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Population View</span></h5>
+                <div class="col-md-5">
+                <div id="population"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <div id="population"></div>
+      </div>
+    </div> -->
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+
+</script>
+
+</body>
+</html>
