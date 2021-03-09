@@ -58,8 +58,8 @@ function createMap(organic_markets){
   };
 
   var myMap = L.map("map", {
-    center: [39.2904, -76.6122],
-    zoom: 10.5,
+    center: [39.0458, -76.6413],
+    zoom: 9,
     layers: [lightmap, organic_markets]
   });
 
