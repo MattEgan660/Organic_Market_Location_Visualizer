@@ -1,8 +1,10 @@
 // Use this link to get the geojson data.
-var file = "static/data/organic_markets.json";
+// var file = "static/data/organic_markets.json";
+var organic_file = "/Markets"
+var county_file = "/County"
 
 // Grabbing our GeoJSON data
-d3.json(file, function(data){
+d3.json(organic_file, function(data){
   console.log(data);
   // Once we get a response, send the data.features object to the createFeatures function
   createFeatures(data.features);
