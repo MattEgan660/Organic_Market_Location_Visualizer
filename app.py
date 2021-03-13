@@ -13,6 +13,10 @@ app.config["MONGO_URI"] = "mongodb://localhost:27017/markets"
 mongo = PyMongo(app)
 
 @app.route("/")
+def home():
+    return render_template("home.html")
+
+@app.route("/markets")
 def markets():
     organic_markets = mongo.db.market_data.find_one()
     return parse_json(organic_markets)

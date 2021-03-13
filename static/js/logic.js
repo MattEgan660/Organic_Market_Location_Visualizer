@@ -1,5 +1,7 @@
 // Use this link to get the geojson data.
-var file = "static/data/organic_markets.json";
+// var file = "static/data/organic_markets.json";
+
+var file = "/markets"
 
 // Grabbing our GeoJSON data
 d3.json(file, function(data){
@@ -25,8 +27,13 @@ function createFeatures(organicData) {
 
   // Sending our earthquakes layer to the createMap function
   createMap(organic_markets);
-
+ 
 }
+
+// function dropdown(){
+//   d3.json(/county)
+// }
+
 
 function createMap(organic_markets){
   
@@ -71,3 +78,4 @@ function createMap(organic_markets){
 
 
 // [39.3343, -76.4394]
+//PLOtly - income and population call it by its id from html
