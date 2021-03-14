@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Maryland Market Finder</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<head>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin="" />>
+
+  <!--D3 cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+  <script src = "https://d3js.org/d3.v4.min.js"></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+</head>
 <style>
 body, html {
   height: 100%;
@@ -14,7 +29,7 @@ body, html {
 .bgimg {
   background-position: center;
   background-size: cover;
-  background-image: url("/w3images/coffeehouse.jpg");
+  background-image: url("/static/img/green_fields.jpg");
   min-height: 75%;
 }
 
@@ -43,9 +58,9 @@ body, html {
 </div>
 
 <!-- Header with image -->
-<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+<header class="bgimg w3-display-container w3-grayscale-min w3-mobile" id="home">
   <div class="w3-display-middle w3-center">
-    <span class="w3-text-white" style="font-size:90px">Maryland<br>New Market Site Finder</span>
+    <span class="w3-text-white" style="font-size:90px">MOM's Organic Market</span>
   </div>
 </header>
 
@@ -53,7 +68,7 @@ body, html {
 <div class="w3-sand w3-grayscale w3-large">
 
 <!-- About Container -->
-<div class="container" id="finder">
+<div class="container w3-mobile" id="finder">
     <div class="w3-content" style="max-width:700px">
         <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">MARYLAND MARKET SITE FINDER</span></h5>
         <p>Find a new market site base on Maryland's current demographic data and competitor locations.</p>
@@ -61,8 +76,8 @@ body, html {
     <div class="row">
         <div class="col-md-2">
             <div class="select_county">
-            <h5>Select County</h5>
-                <select id="selDataset" onchange="optionChanged(this.value)"></select>
+              <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Select County</span></h5>
+                <select class="w3-center" id="selDataset" onchange="optionChanged(this.value)"></select>
             </div>
         <!-- <div class="panel panel-primary"> -->
           <!-- <div class="panel-heading">
@@ -72,30 +87,43 @@ body, html {
           </div>
         </div> -->
         </div>
+        
+        </div>
+            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Map View</span></h5>
+        </div>
 
-        <div class="w3-container" id="menu">
+        <div class="w3-container w3-mobile" id="map">
             <div class="w3-content" style="max-width:700px">
-                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Map View</span></h5>
+                <!-- <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Map View</span></h5> -->
                 <div class="col-md-5">
                 <div id="map"></div>
+                <svg width="200" height="500">
+                  <rect x="0" y="0" width="50" height="50" />
+                </svg>
                 </div>
             </div>
         </div>
     
-        <div class="w3-container" id="menu">
+        <div class="w3-container w3-mobile" id="income">
             <div class="w3-content" style="max-width:700px">
                 <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Income View</span></h5>
                 <div class="col-md-5">
                 <div id="income"></div>
+                <svg width="200" height="500">
+                  <rect x="0" y="0" width="50" height="50" />
+                </svg>
              </div>
         </div>
       </div>
     </div>
-        <div class="w3-container" id="menu">
+        <div class="w3-container w3-mobile" id="population">
             <div class="w3-content" style="max-width:700px">
                 <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Population View</span></h5>
                 <div class="col-md-5">
                 <div id="population"></div>
+                <svg width="200" height="400">
+                  <rect x="0" y="0" width="50" height="50" />
+                </svg>
             </div>
         </div>
     </div>
@@ -123,8 +151,9 @@ crossorigin=""></script>
 <!-- <script type="text/javascript" src="static/js/config.js"></script> -->
 
 <!-- JS  -->
-<script type="text/javascript" src="app.js"></script>
-<!-- <script type="text/javascript" src="static/js/logic2.js"></script> -->
+<!-- <script type="text/javascript" src="app.js"></script> -->
+<script type="text/javascript" src="static/js/logic1.js"></script>
+
 
 </body>
 </html>
