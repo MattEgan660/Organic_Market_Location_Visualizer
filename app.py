@@ -23,7 +23,7 @@ def markets():
 
 @app.route("/County")
 def county():
-    update_county_info = mongo.db.county_data.find_one()
+    update_county_info = mongo.db.update_county_data.find_one()
     return parse_json(update_county_info)
 
 
